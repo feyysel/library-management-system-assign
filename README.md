@@ -44,10 +44,12 @@ UML file: `UML/LibrarySystem.zargo`
 ## Authors
 
 | Name          | ID         |
-|---------------|-----------|
+|---------------|----------- |
 | Feysel Awel   | DDU1601168 |
 | Hayat Kedir   | RMD1254    |
 | Ruth Yeneneh  | RMD211     |
+| Hilina Feleke  |RMD1305    |
+| Saliha Mohammed|RMD2130    |
 
 ## License
 
