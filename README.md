@@ -1,102 +1,54 @@
-The name Listed at the Bottom
+# Library Management System
 
----
+This is a simple **Library Management System** implemented in **Java** for academic purposes.  
+The system was designed using **UML** and managed with **Git & GitHub**.
 
-Library Management System
+## Features
 
-Software Engineering Tools and Practices Assignment
+- Add, remove, and view books
+- Manage authors
+- Register members
+- Borrow and return books
+- Track loans
 
-Project Description
+## Tools Used
 
-This project is a simple Library Management System created for academic purposes.
-The system was first designed using UML in ArgoUML, then converted into Java code, and managed using Git and GitHub.
+- **ArgoUML** – UML design  
+- **Java** – Implementation  
+- **Git & GitHub** – Version control  
+- **Visual Studio Code** – IDE  
 
-
----
-
-Tools Used
-
-ArgoUML
-
-Java
-
-Git & GitHub
-
-Visual Studio Code
-
-
-
----
-
-UML Design
+## UML Design
 
 The UML class diagram includes:
 
-Book
+- `Book`, `Author`, `Member`, `Librarian`, `Loan`
 
-Author
+Relationships:
 
-Member
+- A Book has one or more Authors
+- A Member can borrow multiple Books through Loan
+- A Librarian manages adding/removing Books
 
-Librarian
+UML file: `UML/LibrarySystem.zargo`
 
-Loan
+## Git & GitHub Workflow
 
+1. Initialize repository  
+2. Add `.gitignore`  
+3. Commit initial UML-generated Java code  
+4. Create a branch `LoanManagement`  
+5. Implement `borrowBook()` and `returnBook()` methods  
+6. Push branch, create Pull Request, merge into `main`
 
-Relationships
+## Authors
 
-A Book has one or more Authors
+| Name          | ID         |
+|---------------|-----------|
+| Feysel Awel   | DDU1601168 |
+| Hayat Kedir   | RMD1254    |
+| Ruth Yeneneh  | RMD211     |
 
-A Member can borrow many Books using Loan
+## License
 
-A Librarian manages adding and removing Books
-
-
-The UML file is saved as:
-
-LibrarySystem.zargo
-
-
----
-
-Git and GitHub Workflow
-
-Initialized a local Git repository
-
-Added .gitignore for .class files
-
-Made an initial commit for UML-generated Java code
-
-Created a new branch called LoanManagement
-
-Implemented borrowBook() and returnBook() methods
-
-Pushed the branch and created a Pull Request
-
-Merged the branch into main and pulled latest changes
-
-
-
----
-
-Deliverables
-
-UML file (LibrarySystem.zargo)
-
-Java source code
-
-GitHub repository with branches and pull request
-
-README file
-
----
-
-Authors
-NAME                  ID
-Feysel Awel          DDU1601168
-Hayat Kedir          RMD1254
-Ruth Yeneneh         RMD211
-
-Software Engineering Department
-Project For Software Engineering Tools And Practice
-Dire Dawa University
+This project is for academic purposes.
