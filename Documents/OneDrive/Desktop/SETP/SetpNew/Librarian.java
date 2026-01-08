@@ -26,6 +26,7 @@ public class Librarian {
             }
         }
         return results;
+        System.out.println("No books found with the title: " + title);
     }
 
     // Search books by author name
