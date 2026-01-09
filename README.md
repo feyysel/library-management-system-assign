@@ -50,7 +50,8 @@ UML file: `UML/LibrarySystem.zargo`
 | Ruth Yeneneh  | RMD211     |
 | Hilina Feleke  |RMD1305    |
 | Saliha Mohammed|RMD2130    |
-| Weynishet Dejene|RMD2494    |
+| Weynishet Dejene|RMD2494   |
+| Ephrem Getnet|DDU1600229   |
 
 ## License
 
