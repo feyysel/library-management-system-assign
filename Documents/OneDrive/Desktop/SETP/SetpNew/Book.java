@@ -72,7 +72,7 @@ public class Book {
         System.out.println("Status: " + status);
         System.out.print("Authors: ");
         for (Author a : myAuthor) {
-            System.out.print(a.getName() + " ");
+            System.out.print(a.getName() + " the detailes are displayed");
         }
         System.out.println();
     }
