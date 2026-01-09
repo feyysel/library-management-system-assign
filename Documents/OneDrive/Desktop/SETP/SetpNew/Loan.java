@@ -8,15 +8,14 @@ public class Loan {
     private Date dueDate;
     private Date returnDate;
 
-    public Member myMember;
-    public Librarian myLibrarian;
+    private Member myMember;
+    private Librarian myLibrarian;
 
-    private boolean isReturned = false;
+    private boolean isReturned = true;
 
     // Constructor
-    public Loan(int loanId, Date issueDate, Date dueDate, Member member, Librarian librarian) {
+    public Loan(int loanId, Date dueDate, Member member, Librarian librarian) {
         this.loanId = loanId;
-        this.issueDate = issueDate;
         this.dueDate = dueDate;
         this.myMember = member;
         this.myLibrarian = librarian;
@@ -24,11 +23,12 @@ public class Loan {
 
     // Borrow book
     public void borrowBook() {
-        if (issueDate != null) {
+        if (!isReturned) {
             System.out.println("Book already borrowed.");
             return;
         }
         issueDate = new Date();
+        isReturned = false;
         System.out.println("Book borrowed successfully.");
     }
 
@@ -45,14 +45,12 @@ public class Loan {
 
     // Calculate fine
     public double calculateFine() {
-        if (!isReturned) {
-            return 0.0;
-        }
+        Date effectiveDate = isReturned ? returnDate : new Date();
 
-        if (returnDate.after(dueDate)) {
-            long diff = returnDate.getTime() - dueDate.getTime();
+        if (effectiveDate.after(dueDate)) {
+            long diff = effectiveDate.getTime() - dueDate.getTime();
             long daysLate = TimeUnit.MILLISECONDS.toDays(diff);
-            return daysLate * 5.0; // Fine = 5 per day
+            return daysLate * 5.0; // fine per day
         }
         return 0.0;
     }
